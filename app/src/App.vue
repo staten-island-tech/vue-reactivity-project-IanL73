@@ -1,11 +1,12 @@
 <template>
   <div>
-    <h2>Hello World! :D</h2>
+    <StandBy class="card" v-for="animal in animals" :key="animal.name" :animal="animal"/>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+import StandBy from '@/components/StandBy.vue';
 
 const animals = ref([
   { name: 'Leo', species: 'Lion', weight: 420 },
