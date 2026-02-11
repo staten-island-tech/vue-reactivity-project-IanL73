@@ -1,6 +1,9 @@
 <template>
+  <h2 v-if="ducks">bees</h2>
   <div>
     <StandBy class="card" v-for="animal in animals" :key="animal.name" :animal="animal"/>
+    <div class="party">
+    </div>
   </div>
 </template>
 
@@ -23,5 +26,10 @@ const animals = ref([
 </script>
 
 <style scoped>
-
+.party{
+  border: 3px solid black;
+  border-radius: 8px;
+  display: flex;
+  align-self: flex-end;
+}
 </style>
