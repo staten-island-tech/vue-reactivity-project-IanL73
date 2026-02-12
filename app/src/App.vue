@@ -1,5 +1,4 @@
 <template>
-  <h2 v-if="ducks">bees</h2>
   <div>
     <StandBy class="card" v-for="animal in animals" :key="animal.name" :animal="animal"/>
     <div class="party">
@@ -11,7 +10,7 @@
 import { ref } from 'vue';
 import StandBy from '@/components/StandBy.vue';
 
-const animals = ref([
+const animals = ([
   { name: 'Leo', species: 'Lion', weight: 420 },
   { name: 'Ella', species: 'Elephant', weight: 5000 },
   { name: 'Max', species: 'Dog', weight: 30 },

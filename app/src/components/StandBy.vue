@@ -14,9 +14,8 @@ defineProps({
         required: true,
     }
 })
-const ducks = ref(false)
 function post(){
-    ducks.value = true
+    console.log(animal.name)
 }
 </script>
 
