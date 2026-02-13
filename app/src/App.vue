@@ -1,7 +1,10 @@
 <template>
   <div>
-    <StandBy class="card" v-for="animal in animals" :key="animal.name" :animal="animal"/>
+    <StandBy @click = "post" class="card" v-for="chuck in animals" :key="chuck.name" :animal="chuck"/>
     <div class="party">
+      <h2>
+        Current party
+      </h2>
     </div>
   </div>
 </template>
@@ -22,6 +25,9 @@ const animals = ([
   { name: 'Gerry', species: 'Giraffe', weight: 1200 },
   { name: 'Bella', species: 'Bear', weight: 300 },
 ])
+function post(){
+  console.log("cheese")
+}
 </script>
 
 <style scoped>

@@ -1,5 +1,5 @@
 <template>
-    <div @click ="post">
+    <div>
         <h2>{{ animal.name }}</h2>
         <h3>{{ animal.species }}</h3>
     </div>
@@ -14,9 +14,6 @@ defineProps({
         required: true,
     }
 })
-function post(){
-    console.log(animal.name)
-}
 </script>
 
 <style scoped>
