@@ -1,6 +1,6 @@
 <template>
   <div>
-    <StandBy @click = "post" class="card" v-for="chuck in animals" :key="chuck.name" :animal="chuck"/>
+    <StandBy class="card" v-for="chuck in animals" :key="chuck.name" :animal="chuck"/>
     <div class="party">
       <h2>
         Current party
@@ -25,9 +25,6 @@ const animals = ([
   { name: 'Gerry', species: 'Giraffe', weight: 1200 },
   { name: 'Bella', species: 'Bear', weight: 300 },
 ])
-function post(){
-  console.log("cheese")
-}
 </script>
 
 <style scoped>
