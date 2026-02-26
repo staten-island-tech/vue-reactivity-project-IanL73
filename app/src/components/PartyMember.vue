@@ -1,23 +1,17 @@
 <template>
-    <div @click = "post">
+    <div>
         <h2>{{ animal.name }}</h2>
         <h3>{{ animal.species }}</h3>
     </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-
 const props = defineProps({
     animal:{
         type:Object,
         required: true,
     }
 })
-
-function post(){
-  
-}
 </script>
 
 <style scoped>

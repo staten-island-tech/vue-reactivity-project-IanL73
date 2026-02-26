@@ -1,10 +1,13 @@
 <template>
   <div>
-    <StandBy class="card" v-for="chuck in animals" :key="chuck.name" :animal="chuck"/>
+    <StandBy class="card" v-for="chuck in animals" :key="chuck.name" :animal="chuck"></StandBy>/>
     <div class="party">
       <h2>
         Current party
       </h2>
+      <div class="josh">
+
+      </div>
     </div>
   </div>
 </template>
@@ -13,7 +16,7 @@
 import { ref } from 'vue';
 import StandBy from '@/components/StandBy.vue';
 
-const animals = ([
+const animals = ref([
   { name: 'Leo', species: 'Lion', weight: 420 },
   { name: 'Ella', species: 'Elephant', weight: 5000 },
   { name: 'Max', species: 'Dog', weight: 30 },
