@@ -1,6 +1,6 @@
 <template>
   <div>
-    <StandBy class="card" v-for="chuck in animals" :key="chuck.name" :animal="chuck"></StandBy>/>
+    <StandBy @click="recruit(chuck)" class="card" v-for="chuck in animals" :key="chuck.name" :animal="chuck"></StandBy>
     <div class="party">
       <h2>
         Current party
@@ -28,6 +28,9 @@ const animals = ref([
   { name: 'Gerry', species: 'Giraffe', weight: 1200 },
   { name: 'Bella', species: 'Bear', weight: 300 },
 ])
+function recruit(guy) {
+  console.log(guy.name)
+}
 </script>
 
 <style scoped>

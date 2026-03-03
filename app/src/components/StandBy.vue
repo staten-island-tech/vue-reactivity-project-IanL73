@@ -1,7 +1,8 @@
 <template>
-    <div @click = "post">
+    <div>
         <h2>{{ animal.name }}</h2>
         <h3>{{ animal.species }}</h3>
+        <slot></slot>
     </div>
 </template>
 
@@ -14,10 +15,6 @@ const props = defineProps({
         required: true,
     }
 })
-
-function post(){
-  
-}
 </script>
 
 <style scoped>
