@@ -6,7 +6,7 @@
         Current party
       </h2>
       <div class="josh">
-
+        <!--Create seperate array that keeps track of this and v-for that array. God I'm so smart /j-->
       </div>
     </div>
   </div>
