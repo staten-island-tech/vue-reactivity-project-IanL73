@@ -20,7 +20,10 @@ import { animals } from './stores/PartyStore';
 import { animalsinparty } from './stores/PartyStore';
 
 function recruit(guy) {
-  animalsinparty.value.push(guy)
+  alreadyin = animalsinparty.value.some(guy)
+  if (alreadyin = false){
+    animalsinparty.value.push(guy)
+  }
 }
 function dismiss(guy) {
   console.log(guy.species)
