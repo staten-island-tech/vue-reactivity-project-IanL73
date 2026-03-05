@@ -20,7 +20,6 @@ const props = defineProps({
 <style scoped>
 div{
     display:flex;
-    ;
     justify-content:space-around;
     align-items:center;
     height: 200px;

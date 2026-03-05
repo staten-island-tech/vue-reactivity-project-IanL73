@@ -5,6 +5,7 @@
       <h2>
         Current party
       </h2>
+      <button @click="clear()">clear party</button>
       <div class="josh">
         <PartyMember @click="dismiss(charles)" class="card" v-for="charles in animalsinparty" :key="charles.name" :animal="charles"></PartyMember>
       </div>
@@ -20,13 +21,18 @@ import { animals } from './stores/PartyStore';
 import { animalsinparty } from './stores/PartyStore';
 
 function recruit(guy) {
-  alreadyin = animalsinparty.value.some(guy)
-  if (alreadyin = false){
+  if(animalsinparty.value.length !== 6) {
+    let alreadyin = animalsinparty.value.some((element) => element === guy)
+    if (alreadyin === false){
     animalsinparty.value.push(guy)
-  }
+  }}
 }
 function dismiss(guy) {
-  console.log(guy.species)
+  let guyIndex = animalsinparty.value.findIndex((element) => element === guy)
+  animalsinparty.value.splice(guyIndex, 1)
+}
+function clear() {
+  animalsinparty.value = []
 }
 </script>
 
