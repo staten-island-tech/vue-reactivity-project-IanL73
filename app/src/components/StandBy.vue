@@ -2,7 +2,8 @@
     <div>
         <h2>{{ animal.name }}</h2>
         <h3>{{ animal.species }}</h3>
-        <h3>Lv.{{ animal.level }}</h3>
+        <h3>Lv. {{ animal.level }}</h3>
+        <slot></slot>
     </div>
 </template>
 

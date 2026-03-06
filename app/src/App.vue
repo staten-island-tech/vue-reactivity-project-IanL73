@@ -6,6 +6,7 @@
         Current party
       </h2>
       <button @click="clear()">clear party</button>
+      <h2>Level Average: {{ rLVaverage }}</h2>
       <div class="josh">
         <PartyMember @click="dismiss(charles)" class="card" v-for="charles in animalsinparty" :key="charles.name" :animal="charles"></PartyMember>
       </div>
@@ -26,14 +27,28 @@ function recruit(guy) {
     if (alreadyin === false){
     animalsinparty.value.push(guy)
   }}
+  let total = 0
+  animalsinparty.value.forEach((animal) => total = total + animal.level)
+  total = (total/animalsinparty.value.length)
+  total = total*10
+  total = Math.round(total)
+  rLVaverage.value = total/10
 }
 function dismiss(guy) {
   let guyIndex = animalsinparty.value.findIndex((element) => element === guy)
   animalsinparty.value.splice(guyIndex, 1)
+  let total = 0
+  animalsinparty.value.forEach((animal) => total = total + animal.level)
+  total = (total/animalsinparty.value.length)
+  total = total*10
+  total = Math.round(total)
+  rLVaverage.value = total/10
 }
 function clear() {
   animalsinparty.value = []
+  rLVaverage.value = 0
 }
+const rLVaverage = ref(0)
 </script>
 
 <style scoped>

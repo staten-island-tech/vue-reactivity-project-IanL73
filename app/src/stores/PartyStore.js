@@ -9,7 +9,7 @@ export const animals = ref([
   { name: 'Charlie', species: 'Horse', level: 5},
   { name: 'Hoppy', species: 'Rabbit', level: 6},
   { name: 'Tweety', species: 'Bird', level: 7},
-  { name: 'Gerry', species: 'Giraffe', level: },
+  { name: 'Gerry', species: 'Giraffe', level: 2},
   { name: 'Bella', species: 'Bear', level: 10},
 ])
 
